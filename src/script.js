@@ -25,12 +25,12 @@ let particles = null;
 
 let raycaster, intersects;
 
-const threshold = 0.02;
+const threshold = 0.03;
 
 raycaster = new THREE.Raycaster(undefined, undefined, 0, undefined);
 raycaster.params.Points.threshold = threshold;
 
-window.addEventListener('click', (event) => onParticleClick(event));
+window.addEventListener('mousedown', (event) => onParticleClick(event));
 
 function onParticleClick(event) {
   onPointerMove(event);
